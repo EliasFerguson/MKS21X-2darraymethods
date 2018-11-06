@@ -32,11 +32,27 @@ public class ArrayMethods{
    /*
    *PART 2 - use prior methods where appropriate
    */
-   //public static int[] allRowSums(int[][] ary){}
+   public static int[] allRowSums(int[][] ary){
+     int[] sums = new int[ary.length];
+     for (int i = 0; i < ary.length; i++) {
+       sums[i] = rowSum(ary, i);
+     }
+     return sums;
+   }
     //returns an array of the row sums for each row of ary.
     //Index i of the return array contains the sum of elements in row i.
 
-    //public static int[] allColSums(int[][] ary){}
+    public static int[] allColSums(int[][] ary){
+      int max;
+      for (int i = 1; i < ary.length; i++) {
+        max = Math.max(ary[i].length, ary[i - 1].length);
+      }
+      int[] sums = new int[max];
+      for (int i = 0; i < max; i++) {
+        sums[i] = columnSum(ary, i);
+      }
+      return sums;
+    }
     //Returns an array with the column sum of each column of ary.
     //When a row is not long enough to reach the column count it as a zero. (NO indexOutOfBounds should ever occur)
     //Index i of the return array contains the sum of elements in column i, ignoring any rows that are too short.
