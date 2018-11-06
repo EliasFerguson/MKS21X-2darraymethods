@@ -83,5 +83,4 @@ public class ArrayMethods{
      return true;
    }
     //checks if the array is column-magic (this means that every column has the same column sum).
-
 }
