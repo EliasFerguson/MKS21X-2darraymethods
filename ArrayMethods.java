@@ -62,7 +62,15 @@ public class ArrayMethods{
    /*
    *PART 3 - use prior methods where appropriate
    */
-   //public static boolean isRowMagic(int[][] ary){}
+   public static boolean isRowMagic(int[][] ary){
+     int sums[] = allRowSums(ary);
+     for (int i = 1; i < sums.length; i++) {
+       if (sums[i] != sums[i - 1]) {
+         return false;
+       }
+     }
+     return true;
+   }
      //checks if the array is row-magic (this means that every row has the same row sum).
 
    //public static boolean isColumnMagic(int[][] ary){}
