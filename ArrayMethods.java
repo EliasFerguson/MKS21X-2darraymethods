@@ -43,9 +43,9 @@ public class ArrayMethods{
     //Index i of the return array contains the sum of elements in row i.
 
     public static int[] allColSums(int[][] ary){
-      int max;
-      for (int i = 1; i < ary.length; i++) {
-        max = Math.max(ary[i].length, ary[i - 1].length);
+      int max = 0;
+      for (int i = 0; i < ary.length; i++) {
+        max = Math.max(ary[i].length, max);
       }
       int[] sums = new int[max];
       for (int i = 0; i < max; i++) {
