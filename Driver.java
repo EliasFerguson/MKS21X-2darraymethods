@@ -66,9 +66,8 @@ public class Driver {
 		} catch (Exception e) {
 			System.out.println(++c+". You are producing a "+e.getClass().getCanonicalName()+" when calling columnSum.");
 		}
-  }
 
-	/*	try {
+		try {
 			if (!s(ArrayMethods.allRowSums(array0)).equals("[0, 10, 22]")) {
 				System.out.println(++c+". You are returning the wrong array when allRowSums is called.");
 				System.out.println("\tinput:          "+s(array0));
@@ -101,7 +100,7 @@ public class Driver {
 		} catch (Exception e) {
 			System.out.println(++c+". You are producing a "+e.getClass().getCanonicalName()+" when calling allColSums.");
 		}
-
+/*
 		try {
 			if (ArrayMethods.isRowMagic(array0)) {
 				System.out.println(++c+". You are saying that an array is RowMagic when it isn't.");
@@ -134,10 +133,9 @@ public class Driver {
 			}
 		} catch (Exception e) {
 			System.out.println(++c+". You are producing a "+e.getClass().getCanonicalName()+" when calling isColumnMagic.");
-		}
+		} */
 
 		if (c == 0) System.out.println("Your code passed every test. Nice work.");
 		else System.out.println("\nYou produced "+c+" unexpected result(s). Keep debugging!");
 	}
-  */
 }
